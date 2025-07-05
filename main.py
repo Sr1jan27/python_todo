@@ -1,10 +1,17 @@
-prompt = "Enter a todo:"
 todos = []
-i =0
-while i<5:
-    user_text = input(prompt)
-    todos.append(user_text)
-    i = i + 1
-# user_text = input(prompt)
-print("todo's are: - ")
-print(todos)
+
+while True:
+    user_action = input("Type add or show or exit: ")
+    user_action = user_action.strip()
+
+    match user_action:
+        case 'add':
+            todo = input("Enter Todo: ")
+            todos.append(todo)
+        case 'show':
+            for item in todos:
+                print(item)
+        case 'exit':
+            break
+
+print('Bye!')
