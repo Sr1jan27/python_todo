@@ -17,8 +17,6 @@ while True:
                 print("Enter Correct position dude")
             else :
                 todos[index-1] = input("Please enter the edited todo:- ")
-            # todo = input("Please enter the edited todo:- ")
-            # todos[index-1] = todo
         case 'exit':
             break
         case whatever:
