@@ -9,10 +9,8 @@ while True:
             todo = input("Enter Todo: ")
             todos.append(todo)
         case 'show':
-            item_number = 1
-            for item in todos:
-                print(item_number, item)
-                item_number+=1
+            for item_number, item in enumerate(todos):
+                print(item_number+1, item)
         case 'edit':
             index = int(input("Tell us which item you want to edit :- "))
             if(index> len(todos)):
