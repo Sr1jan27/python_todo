@@ -1,7 +1,7 @@
 todos = []
 
 while True:
-    user_action = input("Type add or show or edit or exit: ")
+    user_action = input("Type add or show or edit or complete or exit: ")
     user_action = user_action.strip()
 
     match user_action:
@@ -18,6 +18,9 @@ while True:
                 print("Enter Correct position dude")
             else :
                 todos[index-1] = input("Please enter the edited todo:- ")
+        case 'complete':
+            completed_ToDo = input("Which ToDo is complete?")
+            todos.remove(completed_ToDo)
         case 'exit':
             break
         case whatever:
