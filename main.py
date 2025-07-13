@@ -18,8 +18,11 @@ while True:
             file.writelines(todos)
             file.close()
         case 'show':
+            file = open('todos.txt','r')
+            todos = file.readlines()
+            file.close()
+
             for item_number, item in enumerate(todos):
-                # row = f"{item_number+1}->{item}"
                 print(f"{item_number+1}->{item}")
         case 'edit':
             index = int(input("Tell us which item you want to edit :- "))
