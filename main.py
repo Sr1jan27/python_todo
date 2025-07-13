@@ -6,8 +6,17 @@ while True:
 
     match user_action:
         case 'add':
-            todo = input("Enter Todo: ")
+            todo = input("Enter Todo: ") + "\n"
+
+            file = open('todos.txt', 'r')
+            todos = file.readlines()
+            file.close()
+
             todos.append(todo)
+
+            file = open('todos.txt', 'w')
+            file.writelines(todos)
+            file.close()
         case 'show':
             for item_number, item in enumerate(todos):
                 # row = f"{item_number+1}->{item}"
