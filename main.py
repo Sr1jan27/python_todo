@@ -1,5 +1,3 @@
-todos = []
-
 while True:
     user_action = input("Type add or show or edit or complete or exit: ")
     user_action = user_action.strip()
